@@ -1,0 +1,178 @@
+/* CASCADING STYLESHEET */
+/* Global */
+*{
+    /* Corrigindo comportamento do CSS */
+    box-sizing: border-box;
+}
+html, body{
+   margin: 0px;
+   color: rgb(233, 129, 32);
+}
+body{
+   font-family: 'Righteous', cursive;
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   background-color: rgb(192, 223, 219);
+}
+
+/* Alinhamentos, Espaçamentos, Larguras e Alturas*/
+/* TÍTULOS */
+p{
+   color: #000000aa;
+}
+header h1, main h2{
+   margin-bottom: 70px;
+}
+h1, h2{
+   color:  rgba(126, 84, 7, 0.966);
+}
+main h2 span{
+   color: rgb(196, 26, 54);
+}
+.form h2{
+   text-align: right;
+   color: #ffffffaa;
+   font-size: 19px;
+}
+
+/* Estrutura */
+header, main{
+   text-align: center;
+}
+header, .form, main{
+
+   /* Espaçamentos com margin*/
+   margin: 0 auto 70px auto;
+
+   /* Limites dos elementos na página*/
+   width: 90%;
+   max-width: 500px;
+
+   /*Aplica a maring nos lados da página*/
+   /*
+   margin-left: auto;
+   margin-right: auto;
+   height: 500px;
+   */
+}
+
+/* Header */
+header button{
+   padding: 8px 16px;
+   border-radius: 4px;
+   background-color: rgb(113, 113, 165);
+   color: white;
+   font-weight: bold;
+   border: none;
+   margin-top: 8px;
+}
+.logo{
+   width: 300px;
+   margin-top: 90px 0;
+   border-radius: 10px;
+   
+}
+headerp{
+   font-size: 14px;;
+}
+
+/* Form */
+section.form{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 45px;
+   background-color: rgb(141, 106, 173) ;
+   padding: 16px 64px;
+   align-items: center ;
+   border-radius: 6px;
+
+   color: brown;
+}
+form input, form button{
+   /* Formata botões - tamanho da largura*/
+   width: 100%;
+
+   /* Espaçamentos*/ 
+   margin-bottom: 6px;
+  
+   /* padding: 8px 16px; também funcionaria para o código abaixo */
+   /* Preenchimento */
+   padding-top: 8px;
+   padding-bottom: 8px;
+   padding-left: 16px;
+   padding-right: 16px;
+
+   /* BORDAS */
+   /* Contorno botão arrednondado*/
+   border-radius: 4px;
+   /* A Implementação acima é a mesma da resumida abaixo*/
+   /*
+   border-top-left-radius: 4px;
+   border-top-right-radius: 4px;
+   border-bottom-left-radius: 4px;
+   border-bottom-right-radius: 4px;
+   */
+   border: 1px white dashed;
+   /* border: 1px red solid; */
+}
+form input{
+   background-color: transparent;
+}
+form input::placeholder{
+   color: #ffffffaa
+}
+form button{
+   font-weight: bold;
+}
+
+/* MAIN */
+main .donors{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.donor p{
+   margin-top: auto;
+  /*
+   margin-top: 24px;
+   margin-bottom: 64px;
+   */
+   padding: 16px;
+}
+.blood{
+   color: #0f0808;
+   font-weight: bold;
+   font-size: 12px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+}
+.blood::before{
+   content: "";
+   background-color: #ce2a2aa9;
+   width: 40px;
+   height: 40px;
+   position: absolute;
+   /*Fazer a gotinha*/
+   border-radius: 50%;
+   border-top-right-radius: 0;
+   transform: rotate(-45deg);
+}
+/* Footer */
+footer{
+   text-align: center;
+   margin-top: auto;
+   padding-bottom: 16px;
+   border: 1px solid black;
+}
+/* Funcionalidades com javascript*/
+section.form{
+   transition: all 250ms;
+}
+section.form.hide{
+   opacity: 0;
+   visibility: hidden;
+   height: 0;
+   margin-top: -70px;
+}
