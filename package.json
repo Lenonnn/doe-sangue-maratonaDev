@@ -10,7 +10,7 @@
   "author": "Lenon",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "nodemon": "^2.0.3",
     "nunjucks": "^3.2.1",
     "pg": "^8.0.1"
